@@ -14,7 +14,7 @@ const
       while (boundary !== -1) {
         let input = buffer.substr(0, boundary);
         buffer = buffer.substr(boundary + 1); // reset buffer
-        self.emit('message', JSON.parse(input));
+        self.emit('message', JSON.parse(input)); // message emitted by LDJClient
         boundary = buffer.indexOf('\n'); // reset boundary for buffer
       }
     });
