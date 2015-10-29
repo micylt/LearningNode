@@ -1,6 +1,5 @@
 'use strict';
 const
-
   fs = require('fs'),
   net = require('net'),
   filename = process.argv[2],
@@ -19,7 +18,7 @@ const
       type: 'changed',
       file: filename,
       timestamp: Date.now()
-      }) + '\n' );
+      }) + '\n');
     });
 
     // cleanup
@@ -27,7 +26,6 @@ const
       console.log('Subscriber disconnected.');
       watcher.close();
     });
-
   });
 
 if (!filename) {
